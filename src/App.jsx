@@ -1,7 +1,10 @@
 import "./App.css";
 import { Routes, Route, HashRouter } from "react-router-dom";
-import Layout from "./views/layout";
-import Home from "./views/home";
+import Layout from "./views/Layout";
+import Home from "./views/Home";
+import Elokuvat from "./views/Elokuvat";
+import Aikataulu from "./views/Aikataulu";
+import Tietoja from "./views/Tietoja";
 import ScrollToTop from "./hooks/ScrollHook";
 
 function App() {
@@ -11,6 +14,9 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/elokuvat" element={<Elokuvat />} />
+          <Route path="/aikataulu" element={<Aikataulu />} />
+          <Route path="/tietoja" element={<Tietoja />} />
         </Route>
       </Routes>
     </HashRouter>

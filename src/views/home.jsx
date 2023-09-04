@@ -2,7 +2,7 @@ const Home = () => {
   return (
     <>
       <div className="bg-tertiary py-6">
-        <h1 className="pb-6">Home</h1>
+        <h1 className=" pt-14 pb-20">Tervetuloa</h1>
         <div className="relative overflow-hidden w-full p-[28.125%]">
           <iframe
             className="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
