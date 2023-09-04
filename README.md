@@ -1,6 +1,7 @@
 # Tailwind CSS exercise
 
-Mediajakelu ja tietovirrat TX00CS27-3007
-React + Vite + Tailwind
+## React + Vite + Tailwind
 
-Visit (https://mediapalvelin.northeurope.cloudapp.azure.com/) for the website
+Course: Mediajakelu ja tietovirrat TX00CS27-3007
+
+Open [https://mediapalvelin.northeurope.cloudapp.azure.com/](https://mediapalvelin.northeurope.cloudapp.azure.com/) to view the project in browser.
