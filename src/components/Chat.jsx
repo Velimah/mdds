@@ -60,7 +60,7 @@ const Chat = () => {
         {submitted && (
           <div className="p-2 bg-fourth">
             <div className="flex pb-4">
-              <div className="text-xl p-2 m-2">Rooms:</div>
+              <div className="text-xl p-2 m-2">Huoneet:</div>
               <button
                 onClick={General}
                 type="submit"
@@ -69,7 +69,7 @@ const Chat = () => {
                 }`}
               >
                 {" "}
-                General
+                Yleinen
               </button>
               <button
                 onClick={() => {
@@ -80,7 +80,7 @@ const Chat = () => {
                   !general ? "bg-tertiary" : "hover:bg-tertiary"
                 }`}
               >
-                Random
+                Elokuvat
               </button>
             </div>
             <div>
@@ -104,7 +104,7 @@ const Chat = () => {
             <div className="max-w-xl mt-6">
               <form onSubmit={handleSubmit} className="">
                 <label htmlFor="chat" className="sr-only">
-                  Your message
+                  Viestisi
                 </label>
                 <div className="flex items-center py-2 bg-fourth dark:bg-gray-700">
                   <div className="bg-fourth px-2 font-bold"> {username}</div>
@@ -114,7 +114,7 @@ const Chat = () => {
                     id="chat"
                     rows="1"
                     className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Your message..."
+                    placeholder="Viestisi..."
                   ></input>
                   <button
                     type="submit"
@@ -138,13 +138,10 @@ const Chat = () => {
 
         {!submitted && (
           <>
-            <div className="text-2xl p-4">
-              {" "}
-              Join the chat by entering your username
-            </div>
+            <div className="text-2xl p-4"> Liity chattiin antamalla nimesi</div>
             <form onSubmit={handleSubmit2} className="w-1/2 mx-auto pb-4">
               <label htmlFor="chat" className="sr-only">
-                Username
+                Käyttäjänimi
               </label>
               <div className="flex items-center py-2 px-3 bg-fourth dark:bg-gray-700">
                 <input
@@ -153,7 +150,7 @@ const Chat = () => {
                   id="chat"
                   rows="1"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Username"
+                  placeholder="Nimi"
                 ></input>
                 <button
                   type="submit"
