@@ -26,7 +26,7 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer"
+        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
       >
         <a
           onClick={() => {
@@ -41,7 +41,7 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer"
+        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
       >
         <a
           onClick={() => {
@@ -56,7 +56,7 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer"
+        className="p-1 font-normal text-xl text-fourth cursor-pointer hover:bg-tertiary rounded-lg transition-colors duration-200"
       >
         <a
           onClick={() => {
@@ -71,7 +71,7 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer"
+        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
       >
         <a
           onClick={() => {

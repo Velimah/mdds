@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import socket from "../webSocket.js";
 
 const Chat = () => {
@@ -13,6 +13,17 @@ const Chat = () => {
       setMessages(msg);
     });
   }, []);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottom = () => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  };
 
   const General = () => {
     socket.emit("joinRoom", "general");
@@ -41,41 +52,46 @@ const Chat = () => {
     socket.emit("joinRoom", "general");
   };
 
+  const messagesContainerRef = useRef(null);
+
   return (
     <>
       <div className="bg-fourth">
         {submitted && (
           <div className="p-2 bg-fourth">
-            <div className="text-2xl">Rooms</div>
-            <button
-              onClick={General}
-              type="submit"
-              className={`p-4 m-4 inline-flex justify-center text-black rounded-full cursor-pointer ${
-                general ? "bg-tertiary" : "hover:bg-tertiary"
-              }`}
-            >
-              {" "}
-              General
-            </button>
-            <button
-              onClick={() => {
-                Random();
-              }}
-              type="submit"
-              className={`p-4 m-4 inline-flex justify-center text-black rounded-full cursor-pointer ${
-                !general ? "bg-tertiary" : "hover:bg-tertiary"
-              }`}
-            >
-              Random
-            </button>
+            <div className="flex pb-4">
+              <div className="text-xl p-2 m-2">Rooms:</div>
+              <button
+                onClick={General}
+                type="submit"
+                className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
+                  general ? "bg-tertiary" : "hover:bg-tertiary"
+                }`}
+              >
+                {" "}
+                General
+              </button>
+              <button
+                onClick={() => {
+                  Random();
+                }}
+                type="submit"
+                className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
+                  !general ? "bg-tertiary" : "hover:bg-tertiary"
+                }`}
+              >
+                Random
+              </button>
+            </div>
             <div>
               <ul
                 id="messages"
-                className="flex flex-col justify-start h-96 overflow-y-scroll"
+                className="flex flex-col justify-start max-h-96 overflow-y-scroll"
+                ref={messagesContainerRef}
               >
                 {messages.map((msg, index) => (
                   <li
-                    className=" bg-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit"
+                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit"
                     key={index}
                   >
                     {msg.time} {msg.u}
@@ -90,8 +106,8 @@ const Chat = () => {
                 <label htmlFor="chat" className="sr-only">
                   Your message
                 </label>
-                <div className="flex items-center py-2 px-3 bg-fourth dark:bg-gray-700">
-                  <div className="bg-fourth px-2"> {username}</div>
+                <div className="flex items-center py-2 bg-fourth dark:bg-gray-700">
+                  <div className="bg-fourth px-2 font-bold"> {username}</div>
                   <input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -126,7 +142,7 @@ const Chat = () => {
               {" "}
               Join the chat by entering your username
             </div>
-            <form onSubmit={handleSubmit2} className="w-1/2 mx-auto">
+            <form onSubmit={handleSubmit2} className="w-1/2 mx-auto pb-4">
               <label htmlFor="chat" className="sr-only">
                 Username
               </label>
