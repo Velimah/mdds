@@ -2,16 +2,18 @@ const Home = () => {
   return (
     <>
       <div className="bg-tertiary py-6">
-        <h1 className=" pt-14 pb-20">Tervetuloa</h1>
-        <div className="relative overflow-hidden w-full p-[28.125%]">
-          <iframe
-            className="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
-            src="https://www.youtube.com/embed/mr15Xzb1Ook?si=GGxpYXS3HPLmmWhU"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <h1 className=" pt-14 pb-20 text-3xl">Tervetuloa</h1>
+        <div className="p-0">
+          <div className="relative overflow-hidden w-full p-[28.125%]">
+            <iframe
+              className="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
+              src="https://www.youtube.com/embed/mr15Xzb1Ook?si=GGxpYXS3HPLmmWhU"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
       <div>
