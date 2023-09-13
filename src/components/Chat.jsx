@@ -36,12 +36,11 @@ const Chat = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    let information = { username: username, message: message };
     if (general) {
-      let information = { u: username, m: message, c: "general" };
-      socket.emit("chat message", information);
+      socket.emit("chat message general", information);
     } else {
-      let information = { u: username, m: message, c: "random" };
-      socket.emit("chat message", information);
+      socket.emit("chat message random", information);
     }
     setMessage("");
   };
@@ -91,12 +90,12 @@ const Chat = () => {
               >
                 {messages.map((msg, index) => (
                   <li
-                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit"
+                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit flex"
                     key={index}
                   >
-                    {msg.time} {msg.u}
-                    {": "}
-                    {msg.m}
+                    <div className="">{msg.time}</div>
+                    <div className="font-bold px-2">{msg.username + ":"}</div>
+                    <div className="">{msg.message}</div>
                   </li>
                 ))}
               </ul>
@@ -107,7 +106,9 @@ const Chat = () => {
                   Viestisi
                 </label>
                 <div className="flex items-center py-2 bg-fourth dark:bg-gray-700">
-                  <div className="bg-fourth px-2 font-bold"> {username}</div>
+                  <div className="bg-fourth px-2 m-2 font-bold text-xl">
+                    {username + ":"}
+                  </div>
                   <input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -118,7 +119,7 @@ const Chat = () => {
                   ></input>
                   <button
                     type="submit"
-                    className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
+                    className="inline-flex justify-center p-2 m-2 rounded-full cursor-pointer hover:bg-tertiary "
                   >
                     <svg
                       className="w-6 h-6 rotate-90 text-secondary"
@@ -131,7 +132,6 @@ const Chat = () => {
                   </button>
                 </div>
               </form>
-              <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
             </div>
           </div>
         )}
@@ -154,7 +154,7 @@ const Chat = () => {
                 ></input>
                 <button
                   type="submit"
-                  className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
+                  className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-tertiary dark:text-blue-500 dark:hover:bg-fourth"
                 >
                   <svg
                     className="w-6 h-6 rotate-90 text-secondary"
