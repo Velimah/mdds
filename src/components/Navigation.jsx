@@ -34,7 +34,7 @@ const Navigation = () => {
           }}
           className="flex items-center"
         >
-          Elokuvat
+          Stream
         </a>
       </Typography>
       <Typography
