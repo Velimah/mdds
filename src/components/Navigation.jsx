@@ -3,15 +3,13 @@ import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [openNav, setOpenNav] = React.useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   React.useEffect(() => {
     window.addEventListener(
