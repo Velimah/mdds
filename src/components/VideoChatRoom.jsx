@@ -20,7 +20,6 @@ const VideoChatRoom = () => {
 
         console.log("roomID: ", roomID);
         socketRef.current = socket.connect("/");
-        console.log("socketRef.current: ", socketRef.current);
         socketRef.current.emit("join videochat room", roomID);
 
         socketRef.current.on("other user", (userID) => {
@@ -149,7 +148,7 @@ const VideoChatRoom = () => {
           <video className="m-2 bg-white" autoPlay ref={userVideo} />
         </div>
         <div>
-          <p className="text-2xl p-2">Quest</p>
+          <p className="text-2xl p-2">Guest</p>
           <video className="m-2 bg-white" autoPlay ref={partnerVideo} />
         </div>
      </div>
