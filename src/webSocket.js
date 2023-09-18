@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
 
-const socket = io("https://mediapalvelin.northeurope.cloudapp.azure.com/mdds-backend");
+const socket = io("https://mdds-backend.azurewebsites.net/");
 
 export default socket;
