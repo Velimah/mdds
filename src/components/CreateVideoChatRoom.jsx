@@ -10,7 +10,10 @@ const CreateRoom = () => {
   }
 
   return (
-    <button onClick={create}>Create room</button>
+    <div className="bg-fourth">
+      <div className="text-2xl p-4"> Luo uusi videochatti</div>
+      <button className="bg-tertiary hover:bg-secondary hover:text-fourth rounded-md p-2 m-4 mb-6" onClick={create}>Chattiin</button>
+    </div>
   );
 }
 

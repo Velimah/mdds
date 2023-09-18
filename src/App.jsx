@@ -2,14 +2,12 @@ import "./App.css";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "./views/Layout";
 import Home from "./views/Home";
-import Elokuvat from "./views/Elokuvat";
-import Aikataulu from "./views/Aikataulu";
-import Tietoja from "./views/Tietoja";
+import Streams from "./views/Streams";
 import ScrollToTop from "./hooks/ScrollHook";
 import ChatRoom from "./views/ChatRoom";
-import CreateRoom from "./routes/CreateRoom";
-import Room from "./routes/Room";
-import { Switch } from "@material-tailwind/react";
+import VideoChatRoom from "./components/VideoChatRoom";
+import Dash from "./views/Dash";
+import VideoChat from "./views/VideoChat";
 
 function App() {
   return (
@@ -18,11 +16,11 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/elokuvat" element={<Elokuvat />} />
+          <Route path="/elokuvat" element={<Streams />} />
           <Route path="/chat" element={<ChatRoom />} />
-          <Route path="/tietoja" element={<Tietoja />} />
-            <Route path="/videochat" element={<CreateRoom />} />
-            <Route path="/videochat/room/:roomID" element={<Room />} />
+          <Route path="/dash" element={<Dash />} />
+          <Route path="/videochat" element={<VideoChat />} />
+          <Route path="/videochat/room/:roomID" element={<VideoChatRoom />} />
         </Route>
       </Routes>
     </HashRouter>

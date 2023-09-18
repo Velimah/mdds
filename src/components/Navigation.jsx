@@ -75,11 +75,11 @@ const Navigation = () => {
       >
         <a
           onClick={() => {
-            navigate("/tietoja");
+            navigate("/dash");
           }}
           className="flex items-center"
         >
-          Tietoja
+          DASH
         </a>
       </Typography>
     </ul>

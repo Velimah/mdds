@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import socket from "../webSocket.js";
 
-const Room = () => {
+const VideoChatRoom = () => {
   const userVideo = useRef(null);
   const partnerVideo = useRef(null);
   const peerRef = useRef();
@@ -139,17 +139,22 @@ const Room = () => {
   }
 
   return (
-    <div className="flex p-4 bg-fourth">
-      <div>
-        <p className="text-2xl p-2">Host</p>
-        <video className="p-1" autoPlay ref={userVideo} />
+    <>
+      <div className="bg-tertiary py-6">
+        <h1 className=" pt-5 pb-5 text-4xl">Videochat with WebRTC</h1>
       </div>
-      <div>
-        <p className="text-2xl p-2">Quest</p>
-        <video className="p-1" autoPlay ref={partnerVideo} />
-      </div>
-    </div>
+      <div className="flex justify-center p-4 bg-fourth">
+        <div>
+          <p className="text-2xl p-2">Host</p>
+          <video className="m-2 bg-white" autoPlay ref={userVideo} />
+        </div>
+        <div>
+          <p className="text-2xl p-2">Quest</p>
+          <video className="m-2 bg-white" autoPlay ref={partnerVideo} />
+        </div>
+     </div>
+    </>
   );
 };
 
-export default Room;
+export default VideoChatRoom;
