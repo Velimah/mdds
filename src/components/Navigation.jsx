@@ -45,11 +45,11 @@ const Navigation = () => {
       >
         <a
           onClick={() => {
-            navigate("/aikataulu");
+            navigate("/videochat");
           }}
           className="flex items-center"
         >
-          Aikataulu
+          Videochat
         </a>
       </Typography>
       <Typography
