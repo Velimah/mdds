@@ -10,11 +10,16 @@ const CreateRoom = () => {
   }
 
   return (
-    <div className="bg-fourth">
+    <div className="bg-fourth grow flex flex-col justify-center items-center">
       <div className="text-2xl p-4"> Luo uusi videochatti</div>
-      <button className="bg-tertiary hover:bg-secondary hover:text-fourth rounded-md p-2 px-3 m-4 mb-6 transition duration-200" onClick={create}>Chattiin</button>
+      <button
+        className="bg-tertiary hover:bg-secondary hover:text-fourth w-48 rounded-md p-2 px-3 m-4 mb-6 transition duration-200"
+        onClick={create}
+      >
+        Chattiin
+      </button>
     </div>
   );
-}
+};
 
 export default CreateRoom;

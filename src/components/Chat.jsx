@@ -55,15 +55,17 @@ const Chat = () => {
 
   return (
     <>
-      <div className="bg-fourth">
+      <div className="bg-fourth grow flex flex-col justify-center">
         {submitted && (
-          <div className="p-2 md:px-6 pb-0 bg-fourth">
+          <div className="grow p-2 md:px-6 pb-0 bg-fourth flex flex-col justify-between">
             <div className="flex justify-center pb-2 mb-4 border-b-2 border-secondary">
               <button
                 onClick={General}
                 type="submit"
                 className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
-                  general ? "bg-tertiary" : "hover:bg-tertiary transition duration-200"
+                  general
+                    ? "bg-tertiary"
+                    : "hover:bg-tertiary transition duration-200"
                 }`}
               >
                 {" "}
@@ -75,7 +77,9 @@ const Chat = () => {
                 }}
                 type="submit"
                 className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
-                  !general ? "bg-tertiary" : "hover:bg-tertiary transition duration-200" 
+                  !general
+                    ? "bg-tertiary"
+                    : "hover:bg-tertiary transition duration-200"
                 }`}
               >
                 Elokuvat
@@ -84,7 +88,7 @@ const Chat = () => {
             <div>
               <ul
                 id="messages"
-                className="flex flex-col justify-start max-h-96 overflow-y-scroll"
+                className="flex flex-col grow justify-start max-h-96 overflow-y-scroll"
                 ref={messagesContainerRef}
               >
                 {messages.map((msg, index) => (
@@ -137,8 +141,14 @@ const Chat = () => {
 
         {!submitted && (
           <>
-            <div className="text-xl lg:text-2xl p-2 lg:p-4"> Liity chattiin antamalla nimesi</div>
-            <form onSubmit={handleSubmit2} className="md:w-1/2 mx-auto pb-0 md:pb-4">
+            <div className="text-xl lg:text-2xl p-2 lg:p-4">
+              {" "}
+              Liity chattiin antamalla nimesi
+            </div>
+            <form
+              onSubmit={handleSubmit2}
+              className="md:w-1/2 mx-auto pb-0 md:pb-4"
+            >
               <label htmlFor="chat" className="sr-only">
                 Käyttäjänimi
               </label>
