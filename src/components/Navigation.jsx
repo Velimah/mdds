@@ -19,7 +19,7 @@ const Navigation = () => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 md:flex-row md:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
@@ -85,7 +85,7 @@ const Navigation = () => {
 
   return (
     <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-secondary rounded-none">
-      <div className="container mx-auto flex items-center justify-between text-fourth">
+      <div className="container flex items-center justify-between text-fourth">
         <Typography
           as="a"
           onClick={() => {
@@ -95,10 +95,10 @@ const Navigation = () => {
         >
           Elokuvasivusto
         </Typography>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden md:block">{navList}</div>
         <IconButton
           variant="text"
-          className="relative ml-auto h-4 w-4 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="relative ml-auto h-4 w-4 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

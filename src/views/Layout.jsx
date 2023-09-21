@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="grow bg-fourth">
         <Outlet />
       </main>
       <Footer />
