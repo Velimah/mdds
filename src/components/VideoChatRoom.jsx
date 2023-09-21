@@ -145,11 +145,11 @@ const VideoChatRoom = () => {
       <div className="flex justify-center p-4 bg-fourth">
         <div>
           <p className="text-2xl p-2">Host</p>
-          <video className="m-2 bg-white" autoPlay ref={userVideo} />
+          <video className="p-2 bg-white" autoPlay ref={userVideo} />
         </div>
         <div>
           <p className="text-2xl p-2">Guest</p>
-          <video className="m-2 bg-white" autoPlay ref={partnerVideo} />
+          <video className="p-2 bg-white" autoPlay ref={partnerVideo} />
         </div>
      </div>
     </>
