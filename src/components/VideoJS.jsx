@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 import "@videojs/themes/dist/sea/index.css";
@@ -27,10 +28,15 @@ const VideoJS = ({ options, themeName = "sea" }) => {
   }, [options, videoRef, playerRef]);
 
   return (
-    <div data-vjs-player className="">
+    <div data-vjs-player>
       <video ref={videoRef} className={`video-js vjs-theme-${themeName}`} />
     </div>
   );
+};
+
+VideoJS.propTypes = {
+  options: PropTypes.object.isRequired,
+  themeName: PropTypes.string,
 };
 
 export default VideoJS;

@@ -11,6 +11,10 @@ const DashVideo = () => {
     ],
   };
 
-  return <VideoJS options={videoJsOptions} />;
+  return (
+    <div className=" w-full max-w-5xl">
+      <VideoJS options={videoJsOptions} />
+    </div>
+  );
 };
 export default DashVideo;

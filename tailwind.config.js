@@ -28,6 +28,9 @@ export default {
         "tertiary": "#A78295",
         "fourth": "#EFE1D1",
       },
+      backgroundImage: {
+        'pattern': "url('background_web.webp')",
+      },
     },
   },
   plugins: [
