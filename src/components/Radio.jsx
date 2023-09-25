@@ -24,7 +24,7 @@ const Radio = () => {
 
   return (
     <>
-      <div className="w-full h-full p-2 lg:p-4">
+      <div className="w-full h-full p-2 mt-4 lg:p-4">
         <div className="bg-fourth flex flex-col m-auto max-w-lg rounded-lg p-3">
           {metadata ? (
             <>
@@ -36,11 +36,11 @@ const Radio = () => {
               {metadata.icestats.source ? (
                 <p>Nyt soi: {metadata?.icestats?.source?.server_description}</p>
               ) : (
-                <p>Radiosta ei tule musiikkia</p>
+                <p className="text-xl">Radiosta ei tule musiikkia</p>
               )}
             </>
           ) : (
-            <p>Radio ei ole päällä</p>
+            <p className="text-xl">Ladataan tietoja...</p>
           )}
         </div>
         <div className="flex justify-center max-w-lg m-auto py-4">
