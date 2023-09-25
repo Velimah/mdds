@@ -3,6 +3,7 @@ import VideoJS from "./VideoJS";
 const DashVideo = () => {
   const videoJsOptions = {
     controls: true,
+    techOrder: ["html5", "dash"],
     sources: [
       {
         src: "my_video_manifest.mpd",

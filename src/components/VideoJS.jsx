@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import videojs from "video.js";
+import "videojs-contrib-dash";
 import "video.js/dist/video-js.css";
 import "@videojs/themes/dist/sea/index.css";
 import "../customTheme.scss";

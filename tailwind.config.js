@@ -29,7 +29,7 @@ export default {
         "fourth": "#EFE1D1",
       },
       backgroundImage: {
-        'pattern': "url('background_web.webp')",
+        'pattern': "url('../background_web.webp')",
       },
     },
   },
