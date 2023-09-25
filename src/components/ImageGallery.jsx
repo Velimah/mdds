@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ImageGallery = ({ images }) => {
   const imagesArray = Object.values(images);
 
@@ -13,6 +15,10 @@ const ImageGallery = ({ images }) => {
       ))}
     </div>
   );
+};
+
+ImageGallery.propTypes = {
+  images: PropTypes.object.isRequired,
 };
 
 export default ImageGallery;
