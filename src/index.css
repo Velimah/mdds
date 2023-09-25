@@ -8,3 +8,18 @@
   font-weight: 400;
   min-height: 100vh;
 }
+
+.video-js {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  margin: 0 auto;
+}
+.vjs-theme-sea .vjs-progress-control .vjs-play-progress {
+  background-color: #3F2E3E;
+}
+
+.video-js .vjs-live-control {
+  align-items: center;
+}

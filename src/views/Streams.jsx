@@ -1,7 +1,18 @@
 import Radio from "../components/Radio";
-import StreamVideo from "../components/StreamVideo";
+import VideoJS from "../components/VideoJS";
 
 const Streams = () => {
+  
+  const videoJsOptions = {
+    controls: true,
+    sources: [
+      {
+        src: "http://195.148.104.124:1935/jakelu/Kiinnostaa/playlist.m3u8",
+        type: "application/x-mpegURL",
+      },
+    ],
+  };
+
   return (
     <>
       <div className="bg-tertiary py-3 lg:py-6">
@@ -10,7 +21,7 @@ const Streams = () => {
         </h1>
       </div>
       <Radio />
-      <StreamVideo />
+      <VideoJS options={videoJsOptions} />
     </>
   );
 };

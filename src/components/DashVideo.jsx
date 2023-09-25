@@ -1,17 +1,16 @@
-import ReactPlayer from "react-player";
+import VideoJS from "./VideoJS";
 
 const DashVideo = () => {
-  return (
-    <div className="w-full">
-      <ReactPlayer
-        url="my_video_manifest.mpd"
-        controls
-        muted
-        playing
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
+  const videoJsOptions = {
+    controls: true,
+    sources: [
+      {
+        src: "my_video_manifest.mpd",
+        type: "application/dash+xml",
+      },
+    ],
+  };
+
+  return <VideoJS options={videoJsOptions} />;
 };
 export default DashVideo;
