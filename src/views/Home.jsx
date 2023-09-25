@@ -1,3 +1,6 @@
+import ImageGallery from "../components/ImageGallery";
+import imageData from "../assets/movieposters.json";
+
 const Home = () => {
   return (
     <>
@@ -6,6 +9,7 @@ const Home = () => {
           Tervetuloa sivustolle
         </h1>
       </div>
+      {/*}
       <div className="relative overflow-hidden w-full p-[28.125%]">
         <iframe
           className="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
@@ -16,26 +20,10 @@ const Home = () => {
           allowfullscreen
         ></iframe>
       </div>
+      */}
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 md:p-8 justify-center">
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
-          <div className="flex justify-self-center max-w-sm h-full">
-            <img src="imageplaceholder.jpg" alt="" />
-          </div>
+        <div>
+          <ImageGallery images={imageData} />
         </div>
       </div>
     </>
