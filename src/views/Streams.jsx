@@ -2,11 +2,12 @@ import Radio from "../components/Radio";
 import VideoJS from "../components/VideoJS";
 
 const Streams = () => {
+  //http://195.148.104.124:1935/jakelu/Kiinnostaa/playlist.m3u8
   const videoJsOptions = {
     controls: true,
     sources: [
       {
-        src: "http://195.148.104.124:1935/jakelu/Kiinnostaa/playlist.m3u8",
+        src: "https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8",
         type: "application/x-mpegURL",
       },
     ],

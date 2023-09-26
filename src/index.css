@@ -23,3 +23,8 @@
 .video-js .vjs-live-control {
   align-items: center;
 }
+.vjs-theme-sea .vjs-picture-in-picture-control, .vjs-theme-sea .vjs-volume-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
