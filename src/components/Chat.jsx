@@ -57,7 +57,7 @@ const Chat = () => {
     <>
       <div className=" grow flex flex-col justify-center items-center">
         {submitted && (
-          <div className="grow m-0 lg:m-4 rounded-lg w-full max-w-5xl p-2 md:px-6 pb-0 bg-fourth flex flex-col justify-between shadow-md">
+          <div className="grow m-0 lg:m-4 rounded-lg w-full max-w-5xl p-2 md:px-6 pb-0 bg-fourth flex flex-col justify-between shadow-xl">
             <div className="flex justify-center pb-2 mb-4 border-b-2 border-secondary">
               <button
                 onClick={General}
@@ -141,7 +141,7 @@ const Chat = () => {
 
         {!submitted && (
           <>
-            <div className="bg-fourth max-w-xl w-full rounded-lg md:shadow-md">
+            <div className="bg-fourth max-w-xl w-full rounded-lg md:shadow-xl">
               <div className="text-xl lg:text-2xl p-2 lg:p-4">
                 {" "}
                 Liity chattiin antamalla nimesi

@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navigation />
-      <main className="grow flex flex-col bg-fourth md:bg-pattern">
+      <main className="grow flex flex-col bg-fourth md:bg-pattern bg-contain">
         <Outlet />
       </main>
       <Footer />

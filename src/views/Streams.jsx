@@ -16,7 +16,7 @@ const Streams = () => {
   return (
     <>
       <div className="bg-tertiary py-4 lg:py-6">
-        <h1 className="text-xl md:text-2xl lg:text-3xl">
+        <h1 className="text-xl md:text-2xl lg:text-3xl text-fourth">
           Audio and video stream
         </h1>
       </div>
