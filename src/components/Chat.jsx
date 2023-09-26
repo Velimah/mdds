@@ -103,7 +103,7 @@ const Chat = () => {
                 ))}
               </ul>
             </div>
-            <div className="mt-4 flex justify-center w-full">
+            <div className="mt-4 flex justify-center w-full bg-fourth">
               <form onSubmit={handleSubmit} className="w-full md:w-1/2">
                 <label htmlFor="chat" className="sr-only">
                   Viestisi
@@ -117,7 +117,7 @@ const Chat = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     id="chat"
                     rows="1"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 shadow-md"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border-gray-300 focus:ring-tertiary focus:border-tertiary border-2 focus:outline-none shadow-md"
                     placeholder="Viestisi..."
                   ></input>
                   <button
@@ -141,7 +141,7 @@ const Chat = () => {
 
         {!submitted && (
           <>
-            <div className="bg-fourth max-w-xl w-full rounded-lg md:shadow-xl">
+            <div className="bg-fourth max-w-xl w-full rounded-lg md:shadow-xl ">
               <div className="text-xl lg:text-2xl p-2 lg:p-4">
                 {" "}
                 Liity chattiin antamalla nimesi
@@ -153,13 +153,13 @@ const Chat = () => {
                 <label htmlFor="chat" className="sr-only">
                   Käyttäjänimi
                 </label>
-                <div className="flex items-center px-3 bg-fourth">
+                <div className="flex items-center px-3 bg-fourth ">
                   <input
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     id="chat"
                     rows="1"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border-gray-300 focus:ring-tertiary focus:border-tertiary border-2 focus:outline-none shadow-md"
                     placeholder="Nimi"
                   ></input>
                   <button

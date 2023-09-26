@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/elokuvat" element={<Streams />} />
+          <Route path="/streams" element={<Streams />} />
           <Route path="/chat" element={<ChatRoom />} />
           <Route path="/dash" element={<Dash />} />
           <Route path="/videochat" element={<VideoChat />} />

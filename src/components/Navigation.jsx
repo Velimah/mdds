@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import {
   Navbar,
   MobileNav,
@@ -8,11 +8,11 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
@@ -33,7 +33,7 @@ const Navigation = () => {
       >
         <a
           onClick={() => {
-            navigate("/elokuvat");
+            navigate("/streams");
           }}
           className="flex items-center"
         >
