@@ -93,10 +93,10 @@ const Chat = () => {
               >
                 {messages.map((msg, index) => (
                   <li
-                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit flex shadow-md"
+                    className=" border border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit flex shadow-md"
                     key={index}
                   >
-                    <div className="">{msg.time}</div>
+                    <div className="hidden sm:block">{msg.time}</div>
                     <div className="font-bold px-2">{msg.username + ":"}</div>
                     <div className="">{msg.message}</div>
                   </li>

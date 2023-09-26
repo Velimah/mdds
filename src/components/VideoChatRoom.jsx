@@ -140,14 +140,14 @@ const VideoChatRoom = () => {
   return (
     <>
       <div className="bg-tertiary py-6">
-        <h1 className=" pt-5 pb-5 text-4xl">Videochat with WebRTC</h1>
+        <h1 className="text-xl md:text-2xl lg:text-3xl text-fourth drop-shadow-sm">Videochatti WebRTC</h1>
       </div>
-      <div className="flex flex-col grow lg:flex-row justify-around items-center p-2 lg:py-4">
-        <div className="bg-fourth rounded-lg max-w-lg w-full p-2 lg:p-4 flex flex-col justify-center shadow-md">
+      <div className="flex flex-col grow lg:flex-row justify-start lg:justify-around items-center p-2 lg:py-4">
+        <div className="bg-fourth rounded-lg max-w-lg w-full p-2 lg:p-4 flex flex-col justify-center md:shadow-md">
           <p className="text-2xl pb-2">Host</p>
           <video className=" bg-white w-full" autoPlay ref={userVideo} />
         </div>
-        <div className="bg-fourth rounded-lg max-w-lg w-full p-2 lg:p-4 flex flex-col justify-center shadow-md">
+        <div className="bg-fourth rounded-lg max-w-lg w-full p-2 lg:p-4 flex flex-col justify-center md:shadow-md">
           <p className="text-2xl pb-2">Guest</p>
           <video className=" bg-white w-full" autoPlay ref={partnerVideo} />
         </div>

@@ -20,15 +20,15 @@ const Navigation = () => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 md:flex-row md:items-center lg:gap-6">
+    <ul className="my-2 mt-2 max-h-11 flex flex-col gap-2 lg:mb-0 lg:mt-0 md:flex-row md:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className={`
-        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        p-1 pb-2 px-2 mt-1 font-normal text-xl text-fourth cursor-pointer
         ${location.pathname === '/elokuvat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
-        rounded transition-colors duration-200 shadow-md
+        rounded transition-colors duration-200 lg:shadow-md
       `}
       >
         <a
@@ -45,9 +45,9 @@ const Navigation = () => {
         variant="small"
         color="blue-gray"
         className={`
-        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        p-1 pb-2 px-2 mt-1 font-normal text-xl text-fourth cursor-pointer
         ${location.pathname === '/videochat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
-        rounded transition-colors duration-200 shadow-md
+        rounded transition-colors duration-200 lg:shadow-md
       `}
       >
         <a
@@ -64,9 +64,9 @@ const Navigation = () => {
         variant="small"
         color="blue-gray"
         className={`
-        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        p-1 pb-2 px-2 mt-1 font-normal text-xl text-fourth cursor-pointer
         ${location.pathname === '/chat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
-        rounded transition-colors duration-200 shadow-md
+        rounded transition-colors duration-200 lg:shadow-md
       `}
       >
         <a
@@ -83,9 +83,9 @@ const Navigation = () => {
         variant="small"
         color="blue-gray"
         className={`
-        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        p-1 pb-2 mt-1 px-2 font-normal text-xl text-fourth cursor-pointer
         ${location.pathname === '/dash' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
-        rounded transition-colors duration-200 shadow-md
+        rounded transition-colors duration-200 lg:shadow-md
       `}
       >
         <a
@@ -101,7 +101,7 @@ const Navigation = () => {
   );
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-secondary rounded-none border-0">
+    <Navbar className=" py-2 px-4 lg:px-8 bg-secondary rounded-none border-0">
       <div className="container flex items-center justify-between text-fourth">
         <Typography
           as="a"
@@ -115,7 +115,7 @@ const Navigation = () => {
         <div className="hidden md:block">{navList}</div>
         <IconButton
           variant="text"
-          className="relative ml-auto h-4 w-4 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
+          className="relative ml-auto h-8 w-8 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

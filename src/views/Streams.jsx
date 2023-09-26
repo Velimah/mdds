@@ -5,6 +5,8 @@ const Streams = () => {
   //http://195.148.104.124:1935/jakelu/Kiinnostaa/playlist.m3u8
   const videoJsOptions = {
     controls: true,
+    autoplay: 'muted',
+    fluid: true,
     sources: [
       {
         src: "https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8",
@@ -22,7 +24,7 @@ const Streams = () => {
       </div>
       <Radio />
       <div className=" grow w-full h-full flex justify-center items-center">
-        <div className="lg:m-4 w-full max-w-5xl">
+        <div className="lg:my-8 w-full max-w-5xl">
           <VideoJS options={videoJsOptions} />
         </div>
       </div>

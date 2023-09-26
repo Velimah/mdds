@@ -8,9 +8,9 @@ const ImageGallery = ({ images }) => {
       {imagesArray.map((image) => (
         <div
           key={image.id}
-          className="flex justify-self-center max-w-sm h-full shadow-md border border-primary"
+          className="flex justify-self-center max-w-sm h-full shadow-xl border border-fourth rounded-lg"
         >
-          <img src={image.poster} alt={`Image ${image.id}`} />
+          <img className="rounded-xl" src={image.poster} alt={`Image ${image.id}`} />
         </div>
       ))}
     </div>
@@ -18,7 +18,7 @@ const ImageGallery = ({ images }) => {
 };
 
 ImageGallery.propTypes = {
-  images: PropTypes.object.isRequired,
+  images: PropTypes.array.isRequired,
 };
 
 export default ImageGallery;
