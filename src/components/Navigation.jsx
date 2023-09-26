@@ -5,11 +5,12 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [openNav, setOpenNav] = React.useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   React.useEffect(() => {
     window.addEventListener(
@@ -24,7 +25,11 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
+        className={`
+        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        ${location.pathname === '/elokuvat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
+        rounded transition-colors duration-200 shadow-md
+      `}
       >
         <a
           onClick={() => {
@@ -39,7 +44,11 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
+        className={`
+        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        ${location.pathname === '/videochat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
+        rounded transition-colors duration-200 shadow-md
+      `}
       >
         <a
           onClick={() => {
@@ -54,7 +63,11 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer hover:bg-tertiary rounded-lg transition-colors duration-200"
+        className={`
+        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        ${location.pathname === '/chat' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
+        rounded transition-colors duration-200 shadow-md
+      `}
       >
         <a
           onClick={() => {
@@ -69,7 +82,11 @@ const Navigation = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal text-xl text-fourth cursor-pointer  hover:bg-tertiary rounded-lg transition-colors duration-200"
+        className={`
+        p-1 pb-2 px-2 font-normal text-xl text-fourth cursor-pointer
+        ${location.pathname === '/dash' ? 'bg-tertiary opacity-90' : 'hover:bg-tertiary hover:opacity-90'}
+        rounded transition-colors duration-200 shadow-md
+      `}
       >
         <a
           onClick={() => {
@@ -84,7 +101,7 @@ const Navigation = () => {
   );
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-secondary rounded-none">
+    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-secondary rounded-none border-0">
       <div className="container flex items-center justify-between text-fourth">
         <Typography
           as="a"

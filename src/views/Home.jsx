@@ -1,5 +1,5 @@
 import ImageGallery from "../components/ImageGallery";
-import imageData from "../assets/movieposters.json";
+import imageData from "../assets/movie-list.json";
 
 const Home = () => {
   return (
@@ -9,19 +9,8 @@ const Home = () => {
           Tervetuloa sivustolle
         </h1>
       </div>
-      {/*}
-      <div className="relative overflow-hidden w-full p-[28.125%]">
-        <iframe
-          className="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
-          src="https://www.youtube.com/embed/mr15Xzb1Ook?si=GGxpYXS3HPLmmWhU"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      */}
-      <div>
+      <div className="flex flex-col justify-center items-center">
+        <h2 className=" mt-6 p-4 text-2xl bg-fourth w-100% max-w-md rounded-lg md:shadow-md">IMDB top rated movies</h2>
         <div>
           <ImageGallery images={imageData} />
         </div>

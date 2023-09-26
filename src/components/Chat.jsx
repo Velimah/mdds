@@ -57,14 +57,14 @@ const Chat = () => {
     <>
       <div className=" grow flex flex-col justify-center items-center">
         {submitted && (
-          <div className="grow m-0 lg:m-4 rounded-lg w-full max-w-5xl p-2 md:px-6 pb-0 bg-fourth flex flex-col justify-between">
+          <div className="grow m-0 lg:m-4 rounded-lg w-full max-w-5xl p-2 md:px-6 pb-0 bg-fourth flex flex-col justify-between shadow-md">
             <div className="flex justify-center pb-2 mb-4 border-b-2 border-secondary">
               <button
                 onClick={General}
                 type="submit"
                 className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
                   general
-                    ? "bg-tertiary"
+                    ? "bg-tertiary shadow-md"
                     : "hover:bg-tertiary transition duration-200"
                 }`}
               >
@@ -78,7 +78,7 @@ const Chat = () => {
                 type="submit"
                 className={`text-xl p-2 m-2 inline-flex justify-center text-black rounded-md cursor-pointer ${
                   !general
-                    ? "bg-tertiary"
+                    ? "bg-tertiary shadow-md"
                     : "hover:bg-tertiary transition duration-200"
                 }`}
               >
@@ -93,7 +93,7 @@ const Chat = () => {
               >
                 {messages.map((msg, index) => (
                   <li
-                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit flex"
+                    className=" border-2 border-tertiary text-md text-black p-3 mx-3 m-1 rounded-lg fit-content text-left w-fit flex shadow-md"
                     key={index}
                   >
                     <div className="">{msg.time}</div>
@@ -108,21 +108,21 @@ const Chat = () => {
                 <label htmlFor="chat" className="sr-only">
                   Viestisi
                 </label>
-                <div className="flex items-center py-2 bg-fourth dark:bg-gray-700">
-                  <div className="bg-fourth px-2 m-2 font-bold text-xl">
-                    {username + ":"}
+                <div className="flex items-center py-2 bg-fourth">
+                  <div className="bg-fourth px-2 m-2 text-xl min-w-fit">
+                    {username + " :"}
                   </div>
                   <input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     id="chat"
                     rows="1"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 shadow-md"
                     placeholder="Viestisi..."
                   ></input>
                   <button
                     type="submit"
-                    className="inline-flex justify-center p-2 m-2 rounded-full cursor-pointer hover:bg-tertiary transition duration-200"
+                    className="inline-flex justify-center p-2 m-2 rounded-full cursor-pointer hover:bg-tertiary hover:shadow-md transition duration-200"
                   >
                     <svg
                       className="w-6 h-6 rotate-90 text-secondary"
@@ -141,7 +141,7 @@ const Chat = () => {
 
         {!submitted && (
           <>
-            <div className="bg-fourth max-w-xl w-full rounded-lg">
+            <div className="bg-fourth max-w-xl w-full rounded-lg md:shadow-md">
               <div className="text-xl lg:text-2xl p-2 lg:p-4">
                 {" "}
                 Liity chattiin antamalla nimesi
@@ -164,7 +164,7 @@ const Chat = () => {
                   ></input>
                   <button
                     type="submit"
-                    className="inline-flex justify-center p-2 m-2 rounded-full cursor-pointer hover:bg-tertiary transition duration-200"
+                    className="inline-flex justify-center p-2 m-2 rounded-full cursor-pointer hover:bg-tertiary transition duration-200 hover:shadow-md"
                   >
                     <svg
                       className="w-6 h-6 rotate-90 text-secondary"

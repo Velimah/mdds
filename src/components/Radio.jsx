@@ -25,7 +25,7 @@ const Radio = () => {
   return (
     <>
       <div className="w-full h-full p-2 mt-4 lg:p-4">
-        <div className="bg-fourth flex flex-col m-auto max-w-lg rounded-lg p-3">
+        <div className="bg-fourth flex flex-col m-auto max-w-lg rounded-lg p-3 md:shadow-md">
           {metadata ? (
             <>
               <h1 className="text-2xl">
